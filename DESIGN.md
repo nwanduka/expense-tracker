@@ -9,62 +9,45 @@ where money goes, while serving as a realistic distributed system for learning K
 networking, observability, and incident response.
 
 ## 2. Problem Statement
-At the end of the month, I can’t clearly account for:
-- Where money came from
-- Where it went
-- What categories dominate my spending
-- How transfers between accounts affect visibility
+- I lose track of where my money goes every month.
+- I have multiple bank accounts and apps, making it hard to know the total inflow/outflow.
+- I want to understand spending patterns and spot unusual expenses.
 
-Technically, this mirrors real production challenges:
-- Multiple data sources
-- Ingestion delays
-- Partial failures
-- Data consistency
-- User trust and reliability
+## 3. Goals
+- Build a simple, usable expense tracker.
+- Learn cloud-native tooling: Docker, Linux, Prometheus, OpenTelemetry, etc.
+- Design with observability-first principles.
+- Make it open source so others can use it for free.
 
-## 3. Learning Goals
-- Linux systems and processes
-- Containerization with Docker
-- Service networking
-- Kubernetes orchestration
-- Metrics with Prometheus
-- Tracing with OpenTelemetry
-- Logging pipelines
-- SLOs, SLIs, alerting
-- Incident response and postmortems
+## 4. High-Level Architecture
+- Frontend: Web UI / CLI interface (v0.1)
+- Backend: API service to record transactions
+- Database: Store transactions, categories, accounts
+- Observability: Prometheus metrics, OpenTelemetry traces/logs
+- Deployment: Docker initially, then Kubernetes for orchestration
 
-## 4. System Overview
-(High-level architecture diagram will go here)
+## 5. Features
+- Log income and expenses with categories and accounts.
+- Summarize monthly spending.
+- Query/filter transactions.
+- Track trends over time.
+- Optional: alerts for unusual transactions (stretch goal).
 
-## 5. Services
-- Frontend (dashboard)
-- Ingestion API
-- Processing/categorization service
-- Storage (Postgres)
-- Observability stack (Prometheus, Grafana, Loki, OTel Collector)
-
-## 6. Observability Design
-- What metrics matter
-- What traces matter
-- What logs matter
-
-## 7. Reliability Scenarios
+## 6. Reliability Scenarios
 - Bank API outage
 - Slow database
 - Dropped transactions
 - Duplicate entries
 - High latency
 
-## 8. Roadmap
-### Phase 1: Local with Docker
-### Phase 2: Kubernetes
-### Phase 3: Observability
-### Phase 4: Failure Injection & SLOs
-### Phase 5: Cloud Deployment
-
-## 9. Portfolio Outputs
-- Architecture diagrams
-- Dashboards
-- Incident reports
-- Blog posts
-- Demo videos
+## 7. Roadmap
+| Version	| Focus |
+| ------- | ----- |
+| v0.1	| CLI expense logging + storage |
+v0.2 | Web UI + basic charts
+v0.3	| API + structured logs
+v0.4	| Metrics + traces integration
+v0.5	| Dockerized deployment
+v0.6	| Kubernetes deployment + dashboards
+v0.7	| CI/CD + automated tests
+v0.8	| Contributor-friendly documentation & guides
