@@ -24,13 +24,13 @@ Build a self-hostable, open-source personal finance platform that:
 - Initial repository structure
 
 **What's coming next:**
-- [ ] Basic transaction storage and retrieval API
+- [x] Basic transaction storage and retrieval API
 - [ ] Simple web interface for manual transaction entry
-- [ ] Docker containerization
-- [ ] Observability implementation
+- [x] Docker containerization
+- [x] Observability implementation
 - [ ] Kubernetes deployment configuration
 - [ ] Transaction categorization engine
-- [ ] SMS/email alert parsing for major Nigerian banks
+- [x] Email alert parsing for major Nigerian banks
 - [ ] Dashboard with spending analytics
 
 ## Architecture
